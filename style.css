@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 900px;
+}
+
+.border {
+    background-color: #ed0f0e;
+}
+
+.border-top, .border-bottom {
+    height: 150px;
+}
+
+.border-top {
+    text-align: center;
+    font-size: 45px;
+    color: gold;
+    font-family: 'Brush Script MT', 'Lucida Handwriting', Cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border-side {
+    flex: 1;
+}
+
+.border-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.canvas {
+    width: 650px;
+    background-color: #eeeceb;
+    display: flex;
+    border: 5px solid black;
+}
+
+.content {
+    display: flex;
+    height: 600px;
+}
+
+.button-pixel {
+    margin-left: 20px;
+}
+
+.button-color {
+    margin-right: 20px;
+}
+
+.button-etch {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    font-size: 14px;
+    background-color: #eeeceb;
+    font-family: 'Brush Script MT', 'Lucida Handwriting', Cursive;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.input-clear {
+    width: 650px;
+}
