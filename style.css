@@ -58,10 +58,6 @@ body {
     margin-left: 20px;
 }
 
-.button-color {
-    margin-right: 20px;
-}
-
 .button-etch {
     width: 90px;
     height: 90px;
@@ -71,6 +67,11 @@ body {
     font-family: 'Brush Script MT', 'Lucida Handwriting', Cursive;
     font-weight: bold;
     border: 1px solid black;
+}
+
+.button-color {
+    margin-right: 20px;
+    border-radius: 5%;
 }
 
 .input-clear {
