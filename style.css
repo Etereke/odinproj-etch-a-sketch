@@ -2,7 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 .container {
@@ -44,12 +44,14 @@ body {
     width: 650px;
     background-color: #eeeceb;
     display: flex;
-    border: 5px solid black;
+    border: 1px solid #eeeceb;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .content {
     display: flex;
-    height: 600px;
+    height: 650px;
 }
 
 .button-pixel {
