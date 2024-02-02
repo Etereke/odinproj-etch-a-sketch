@@ -1,17 +1,32 @@
 const canvas = document.querySelector('.canvas');
 const buttonPixel = document.querySelector('.button-pixel');
 const buttonColor = document.querySelector('.button-color');
+const inputClear = document.querySelector('.input-clear');
 let color = buttonColor.value;
+inputClear["data-last-value"] = 0;
 
 buttonPixel.addEventListener('click', () => {
     let res = 0;
     while(res < 2 || res > 100) {
         res = +prompt("Please choose a resolution (2-100, default: 16)", "");
     }
+    inputClear.setAttribute('max', res);
     createCanvas(res);
 });
 buttonColor.addEventListener('input', (e) => {
     color = e.target.value;
+});
+inputClear.addEventListener('input', (e) => {
+    const target = e.target;
+    const divList = document.querySelectorAll('.canvas > div');
+    const delIndex = Math.min(parseInt(target.value), parseInt(target["data-last-value"]));
+    divList.forEach((div, index) => {
+        if (index % parseInt(target.max) === delIndex) {
+            div.style.backgroundColor = '#eeeceb';
+            div['data-color'] = '';
+        }
+    });
+    target["data-last-value"] = e.target.value;
 });
 
 createCanvas(16);
@@ -20,6 +35,7 @@ function createCanvas(resolution) {
     const divList = document.querySelectorAll('.canvas > div');
     const canvasPixelWidth = canvas.clientWidth / resolution + 'px';
     const canvasPixelHeight = canvas.clientHeight / resolution + 'px';
+    inputClear.setAttribute('max', resolution);
     divList.forEach((div) => {
         div.remove();
     });
